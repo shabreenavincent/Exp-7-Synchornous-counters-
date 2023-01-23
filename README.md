@@ -44,45 +44,119 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
 
-4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
+DEVELOPED BY : shabreenavincent 
+REGISTER NUMBER :22009378
+
+4-bit Count Down Counter Procedure write all the steps invloved
+
+Create a new project in Quartus2 software .
+Name the project as uc for upcounter and dc for down counter.
+Create a new verilog hdl file in the project file.
+Name the module declare as dc and uc for down counter and upcounter.
+Within the module declare input and output variables.
+Create a loop using if-else with condition parameter as reset.
+End the loop.
+End the module.
+PROGRAM
+
+Program for flipflops and verify its truth table in quartus using Verilog programming.
+
+UP COUNTER
+
+module UPCOUNTER(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up<=4'd0;
+else counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+end module
+
+DOWN COUNTER
+
+module DOWNCOUNTER(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
+
+RTL LOGIC
+UP COUNTER
 
 
 
-### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+
+![up counter](https://user-images.githubusercontent.com/119475721/214063634-74d0f30e-4a61-45db-9122-a502bdebecbc.png)
+
+
+
+
+
+DOWN COUNTER
 
 
 
 
 
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+![down counter](https://user-images.githubusercontent.com/119475721/214063971-5313122a-004c-44a1-a8a7-798e33d1be5a.png)
+
+
+
+TIMING DIGRAMS
+UP COUNTER
+
+
+
+
+![up timing diagram](https://user-images.githubusercontent.com/119475721/214064385-575a7e12-b09f-4946-a225-55497abdfb6b.png)
+
+
+
+
+
+DOWN COUNTER
+
+
+
+
+![dowm timing diagram](https://user-images.githubusercontent.com/119475721/214064711-31d85e5a-bddd-49e7-a4d0-550885f74ba9.png)
+
+
+TRUTH TABLE UP COUNTER
 
 
 
 
 
 
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
+![up truth table](https://user-images.githubusercontent.com/119475721/214065107-503d7e40-a271-41a7-9621-3d31a912a5d8.png)
 
 
 
 
 
-### TRUTH TABLE 
+DOWN COUNTER
 
 
 
 
 
 
-### RESULTS 
+![down truthtable](https://user-images.githubusercontent.com/119475721/214065557-3216c175-dea1-4377-985d-2f640e98d14b.png)
+
+
+RESULTS
+
+Thus synchornous counters up counter and down counter circuit are studied and the truth table for different logic gates are verified.
+
+
